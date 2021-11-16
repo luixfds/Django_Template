@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <body>
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      {% include 'topo.html' %}
+      <!-- Navbar End -->
+
+      <!-- Hero Area Start -->
+      {% include 'heroarea.html' %}
+      <!-- Hero Area End -->
+
+    </header>
+    <!-- Header Area wrapper End -->
+
+    <!-- Services Section Start -->
+    {% include 'service.html' %}
+    <!-- Services Section End -->
+
+    <!-- About Section start -->
+    {% include 'about.html' %}
+    <!-- About Section End -->
+
+    <!-- Features Section Start -->
+    {% include 'feature.html' %}
+    <!-- Features Section End -->
+
+    <!-- Team Section Start -->
+    {% include 'team.html' %}
+    <!-- Team Section End -->
+
+    <!-- Pricing section Start -->
+    {% include 'pricing.html' %}
+    <!-- Pricing Table Section End -->
+
+    <!-- Testimonial Section Start -->
+    {% include 'testmonial.html' %}
+    <!-- Testimonial Section End -->
+
+    <!-- Call To Action Section Start -->
+    {% include 'action.html' %}
+    <!-- Call To Action Section End -->
+
+
+    <!-- Contact Section Start -->
+    {% include 'contact.html' %}
+    <!-- Contact Section End -->
+
+
+    <!-- Footer Section Start -->
+    {% include 'footer.html' %}
+    <!-- Footer Section End -->
+    <!-- End Preloader -->
+
+  </body>
+
+{% endblock %}
