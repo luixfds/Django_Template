@@ -19,7 +19,7 @@ class Base(models.Model):
         Abstract = True
 
 
-class Serviços(Base):
+class Servicos(Base):
     ICONES = (
         ('ini-cog', 'Engrenagem'),
         ('ini-stats-up', 'Grafico'),
