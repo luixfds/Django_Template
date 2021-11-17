@@ -51,15 +51,14 @@ class Cargo(Base):
         return self.cargo
 
 
-class Equipe:
+class Equipe(Base):
     name = models.CharField(max_length=30)
     cargo = models.ForeignKey(Cargo, verbose_name='Cargo', on_delete=models.CASCADE)
     bio = models.CharField(max_length=200)
     facebook = models.CharField('Facebook', max_length=200, default='#')
     twitter = models.CharField('Twitter', max_length=200, default='#')
     instagram = models.CharField('Instagram', max_length=200, default='#')
-    foto = StdImageField('Foto', upload_to=troca_nome, variations={'thumb': {'widht': 400, 'height': 400}})
-    objects = models.Manager()
+    foto = StdImageField('Foto', upload_to=troca_nome, variations={'thumb': {'width': 400, 'height': 400}})
 
     class Meta:
         verbose_name = 'Equipe'
