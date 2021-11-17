@@ -1,3 +1,4 @@
+import variable as variable
 from django.db import models
 from stdimage import StdImageField
 import uuid
@@ -48,3 +49,21 @@ class Cargo(Base):
 
     def __str__(self):
         return self.cargo
+
+
+class Equipe:
+    name = models.CharField(max_length=30)
+    cargo = models.ForeignKey(Cargo, verbose_name='Cargo', on_delete=models.CASCADE)
+    bio = models.CharField(max_length=200)
+    facebook = models.CharField('Facebook', max_length=200, default='#')
+    twitter = models.CharField('Twitter', max_length=200, default='#')
+    instagram = models.CharField('Instagram', max_length=200, default='#')
+    foto = StdImageField('Foto', upload_to=troca_nome, variable={'thumb':{'widht':400, 'height':400}})
+
+    class Meta:
+        verbose_name = 'Equipe'
+        verbose_name_plural = 'Equipes'
+
+    def __str__(self):
+        return self.name
+
