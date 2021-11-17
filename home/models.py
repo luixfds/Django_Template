@@ -21,12 +21,12 @@ class Base(models.Model):
 
 class Servicos(Base):
     ICONES = (
-        ('ini-cog', 'Engrenagem'),
-        ('ini-stats-up', 'Grafico'),
-        ('ini-users', 'Configurações'),
-        ('ini-layers', 'Designer'),
-        ('ini-mobile', 'Mobilete'),
-        ('ini-rocket', 'Foguetin'),
+        ('lni-cog', 'Engrenagem'),
+        ('lni-stats-up', 'Grafico'),
+        ('lni-users', 'Configurações'),
+        ('lni-layers', 'Designer'),
+        ('lni-mobile', 'Mobilete'),
+        ('lni-rocket', 'Foguetin'),
     )
     titulo = models.CharField(max_length=30)
     descricao = models.CharField(max_length=100)

@@ -7,18 +7,47 @@
         </div>
         <div class="row">
           <!-- Services item -->
+          {% for linhas in dados_Servicos %}
           <div class="col-md-6 col-lg-4 col-xs-12">
             <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
               <div class="icon">
-                <i class="lni-cog"></i>
+                <i class="{{ linhas.icone }}"></i>
               </div>
               <div class="services-content">
-                <h3><a href="#">Easy To Used</a></h3>
-                <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
+                <h3><a href="#">{{ linhas.titulo }}</a></h3>
+                <p>
+                  {{linhas.descricao}}
+                </p>
               </div>
             </div>
           </div>
-          <!-- Services item -->
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Services item
           <div class="col-md-6 col-lg-4 col-xs-12">
             <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
               <div class="icon">
@@ -30,7 +59,7 @@
               </div>
             </div>
           </div>
-          <!-- Services item -->
+          Services item
           <div class="col-md-6 col-lg-4 col-xs-12">
             <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
               <div class="icon">
@@ -42,7 +71,7 @@
               </div>
             </div>
           </div>
-          <!-- Services item -->
+         Services item
           <div class="col-md-6 col-lg-4 col-xs-12">
             <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
               <div class="icon">
@@ -54,7 +83,7 @@
               </div>
             </div>
           </div>
-          <!-- Services item -->
+          Services item
           <div class="col-md-6 col-lg-4 col-xs-12">
             <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
               <div class="icon">
@@ -66,7 +95,7 @@
               </div>
             </div>
           </div>
-          <!-- Services item -->
+         Services item
           <div class="col-md-6 col-lg-4 col-xs-12">
             <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
               <div class="icon">
@@ -78,6 +107,3 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
