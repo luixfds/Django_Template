@@ -1,4 +1,4 @@
-import variable as variable
+
 from django.db import models
 from stdimage import StdImageField
 import uuid
@@ -58,7 +58,8 @@ class Equipe:
     facebook = models.CharField('Facebook', max_length=200, default='#')
     twitter = models.CharField('Twitter', max_length=200, default='#')
     instagram = models.CharField('Instagram', max_length=200, default='#')
-    foto = StdImageField('Foto', upload_to=troca_nome, validators={'thumb': {'widht': 400, 'height': 400}})
+    foto = StdImageField('Foto', upload_to=troca_nome, variations={'thumb': {'widht': 400, 'height': 400}})
+    objects = models.Manager()
 
     class Meta:
         verbose_name = 'Equipe'
@@ -66,4 +67,3 @@ class Equipe:
 
     def __str__(self):
         return self.name
-

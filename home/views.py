@@ -8,6 +8,6 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
-        context['dados servicos'] = Servicos.objects.order_by('?').all()
-        context['dados equipe'] = Equipe.objects.all()
+        context['dados_Servicos'] = Servicos.objects.order_by('?').all()
+        context['dados_Equipe'] = Equipe.objects.all()
         return context
